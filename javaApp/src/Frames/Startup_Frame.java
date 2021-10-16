@@ -29,6 +29,7 @@ Alcohol_Page ap = new Alcohol_Page();
 Drugs_Page dp = new Drugs_Page();
 Meds_Page mp = new Meds_Page();
 Score_Page sp = new Score_Page();
+Emergency em = new Emergency();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -125,9 +126,9 @@ Score_Page sp = new Score_Page();
     }//GEN-LAST:event_Alcohol_ButtonActionPerformed
 
     private void Alcohol_Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alcohol_Button1ActionPerformed
-          Emergency em = new Emergency();
+
           em.setVisible(true);
-          this.setVisible(false);
+        //  this.setVisible(false);
     }//GEN-LAST:event_Alcohol_Button1ActionPerformed
 
     private void Alcohol_Button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alcohol_Button2ActionPerformed

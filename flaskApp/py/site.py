@@ -1,6 +1,8 @@
 #flask website app for displaying reliable news from newsGrabber file
 from flask import Flask, redirect, url_for, render_template
+from scrape import *
 #from newsGrabber import *
+
 
 app = Flask(__name__)
 app = Flask(__name__, static_folder='../static', template_folder='../html')
@@ -25,7 +27,7 @@ def other(name):
 @app.route("/reliable-news/")
 def first_page():
     try:
-        return render_template("index.html", page="Reliable News", list=["blah", "blah", "blah", "blah", "blah", "blah", "blah", "blah"])
+        return render_template("index.html", page="Reliable News", list1=links, list2=titles, list2=texts)
     except:
         print('\nerror in first_page func\n')
 
@@ -47,6 +49,10 @@ def third_page():
 
 
 #scrape info info from websites into 
+getNews()
+links = getLinks()
+titles = getTitles()
+texts = getText()
 
 
 if __name__ == "__main__":
