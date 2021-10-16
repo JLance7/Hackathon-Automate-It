@@ -1,0 +1,68 @@
+<!DOCTPYE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <!-- css styling link-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+    </head>
+    <body>
+        <div class="content">
+            <!-- Heading -->
+        <section>
+            <div class="top">
+                <!-- Logo-->
+                <a href="{{ url_for('first_page') }}">
+                    <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}">
+                </a>
+                <ul class="nav">
+                    <li class="menu"> <a class="menu" href="{{ url_for('first_page') }}">
+                            Reliable News
+                        </a>
+                    </li>
+                    <li class="menu">
+                        <a class="menu" href="{{ url_for('second_page') }}">
+                            Filtered Out News
+                        </a>
+                    </li>
+                    <li class="menu">
+                        <a class="menu" href="{{ url_for('third_page') }}">
+                            Drub Abuse App
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <h1>Drug Abuse App</h1>
+        
+        <section>
+            <div class="news">
+                
+            </div>
+        </section>
+        </div>
+    </body>
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <ul class="foot">
+                <li>
+                    <p>Kishan Bhakta</p>
+                </li>
+                <li>
+                    <p>Venkat</p>
+                </li>
+                <li>
+                    <p>Joshua Lanctot</p>
+                </li>
+                <li>
+                    <p>Michael Schall</p>
+                </li>
+                <li>
+                    <p>Max Ammertorp</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</html>
