@@ -6,18 +6,15 @@ from sklearn.linear_model import PassiveAggressiveClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import cross_val_score
-import os
-cwd = os.getcwd()
-print()
-print(cwd)
-print()
+
 df = p.read_csv('../data/train.csv')
+df = df.dropna
 #0 is unreliable, 1 is reliable
 
 #df.label.value_counts() shows how many are reliable or unreliable
 
 #place text in trainset (relationship between article text and if it is real or fake)
-trainSet1, testSet1, trainSet2, testSet2  = train_test_split(df['text'], df['label'], test_size= 0.1, random_state=5, shuffle=True)
+trainSet1, testSet1, trainSet2, testSet2  = train_test_split(df['text'], df['label'], test_size= 0.01, random_state=5, shuffle=True)
 #vectorize text (convert to numerical representation)
 tfidf_vectorizer=TfidfVectorizer(stop_words='english', max_df=0.5)
 
@@ -28,7 +25,6 @@ numericTest = tfidf_vectorizer.transform(testSet1.values.astype('U'))
 #passive aggressive strategy for determining true or false
 passive = PassiveAggressiveClassifier(max_iter=50)
 passive.fit(numericTrain, trainSet2) 
-
 
 
 def checkFake(text):

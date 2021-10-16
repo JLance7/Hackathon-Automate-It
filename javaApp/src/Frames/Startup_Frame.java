@@ -34,39 +34,41 @@ Score_Page sp = new Score_Page();
 
         jLabel2 = new javax.swing.JLabel();
         Alcohol_Button = new javax.swing.JButton();
-        Drugs_Button = new javax.swing.JButton();
-        Meds_Button = new javax.swing.JButton();
-        Score_Button = new javax.swing.JButton();
+        Alcohol_Button1 = new javax.swing.JButton();
+        Alcohol_Button2 = new javax.swing.JButton();
+        Alcohol_Button3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel2.setText("Please select one of the following:");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Drug Abuse Consolation");
+        jLabel2.setDoubleBuffered(true);
 
-        Alcohol_Button.setText("Alcohol");
+        Alcohol_Button.setText("Drugs");
         Alcohol_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Alcohol_ButtonActionPerformed(evt);
             }
         });
 
-        Drugs_Button.setText("Drug");
-        Drugs_Button.addActionListener(new java.awt.event.ActionListener() {
+        Alcohol_Button1.setText("Emergency Contact");
+        Alcohol_Button1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Drugs_ButtonActionPerformed(evt);
+                Alcohol_Button1ActionPerformed(evt);
             }
         });
 
-        Meds_Button.setText("Meds");
-        Meds_Button.addActionListener(new java.awt.event.ActionListener() {
+        Alcohol_Button2.setText("Alcohol");
+        Alcohol_Button2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Meds_ButtonActionPerformed(evt);
+                Alcohol_Button2ActionPerformed(evt);
             }
         });
 
-        Score_Button.setText("Score");
-        Score_Button.addActionListener(new java.awt.event.ActionListener() {
+        Alcohol_Button3.setText("Alcohol");
+        Alcohol_Button3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Score_ButtonActionPerformed(evt);
+                Alcohol_Button3ActionPerformed(evt);
             }
         });
 
@@ -74,38 +76,40 @@ Score_Page sp = new Score_Page();
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jLabel2)
-                .addContainerGap(112, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Meds_Button)
-                    .addComponent(Alcohol_Button))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Drugs_Button)
-                        .addGap(40, 40, 40))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Score_Button)
-                        .addGap(48, 48, 48))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Alcohol_Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Alcohol_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Alcohol_Button1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Alcohol_Button2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(57, 57, 57))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jLabel2)
+                .addContainerGap(286, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(41, 41, 41)
                 .addComponent(jLabel2)
-                .addGap(34, 34, 34)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Alcohol_Button)
-                    .addComponent(Drugs_Button))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Meds_Button)
-                    .addComponent(Score_Button))
-                .addGap(66, 66, 66))
+                    .addComponent(Alcohol_Button3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Alcohol_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Alcohol_Button2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Alcohol_Button1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79))))
         );
 
         pack();
@@ -120,32 +124,19 @@ Score_Page sp = new Score_Page();
         this.setVisible(false);
     }//GEN-LAST:event_Alcohol_ButtonActionPerformed
 
-    private void Drugs_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Drugs_ButtonActionPerformed
-        // TODO add your handling code here:
-        ap.setVisible(false);
-        mp.setVisible(false);
-        sp.setVisible(false);
-        dp.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Drugs_ButtonActionPerformed
+    private void Alcohol_Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alcohol_Button1ActionPerformed
+          Emergency em = new Emergency();
+          em.setVisible(true);
+          this.setVisible(false);
+    }//GEN-LAST:event_Alcohol_Button1ActionPerformed
 
-    private void Meds_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Meds_ButtonActionPerformed
+    private void Alcohol_Button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alcohol_Button2ActionPerformed
         // TODO add your handling code here:
-        ap.setVisible(false);
-        dp.setVisible(false);
-        sp.setVisible(false);
-        mp.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Meds_ButtonActionPerformed
+    }//GEN-LAST:event_Alcohol_Button2ActionPerformed
 
-    private void Score_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Score_ButtonActionPerformed
+    private void Alcohol_Button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Alcohol_Button3ActionPerformed
         // TODO add your handling code here:
-        ap.setVisible(false);
-        mp.setVisible(false);
-        dp.setVisible(false);
-        sp.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Score_ButtonActionPerformed
+    }//GEN-LAST:event_Alcohol_Button3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -185,9 +176,9 @@ Score_Page sp = new Score_Page();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Alcohol_Button;
-    private javax.swing.JButton Drugs_Button;
-    private javax.swing.JButton Meds_Button;
-    private javax.swing.JButton Score_Button;
+    private javax.swing.JButton Alcohol_Button1;
+    private javax.swing.JButton Alcohol_Button2;
+    private javax.swing.JButton Alcohol_Button3;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
