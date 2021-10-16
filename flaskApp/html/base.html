@@ -39,11 +39,11 @@
         <section>
             <div class="news">
                 <div style="margin-top: 50px;">
-                    <!-- Print out list of reliable or unreliable news-->
-                {% for x in list %}
-                <p>{{x}}</p>
-                
-           {% endfor %}
+                <!-- Print out list of reliable or unreliable news-->
+                {% for i in range(num) %}
+                <h2 style="font-family:'Gill Sans'; font-size: 30px;">{{list2[i]}}</h2>
+                <p style="margin: 0px 15px 0px 15px; font-size: 20px;">{{list3[i]}}</p>
+                {% endfor %}
                 </div>
             </div>
         </section>
