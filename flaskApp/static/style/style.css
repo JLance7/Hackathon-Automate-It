@@ -92,3 +92,27 @@ a.menu:hover{
 p {
     margin: 10px;
 }
+
+.relyH{
+    font-family:'Gill Sans'; 
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.relyP{
+    margin: 0px 15px 0px 15px; 
+    font-size: 20px;
+    text-align: left;
+}
+
+.relyA{
+    color: blue; 
+    text-decoration: underline;
+    text-align: left; 
+}
+
+.break{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

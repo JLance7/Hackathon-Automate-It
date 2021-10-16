@@ -1,10 +1,11 @@
 #flask website app for displaying reliable news from newsGrabber file
 from flask import Flask, redirect, url_for, render_template
 from scrape import *
+import time
 #from newsGrabber import *
-links = None
-titles = None
-texts = None
+links = []
+titles = []
+texts = []
 
 app = Flask(__name__)
 app = Flask(__name__, static_folder='../static', template_folder='../html')
@@ -20,7 +21,6 @@ def home():
 #any other subdirectory url given
 #if no subdirectory url is given show reliable news (index.html)
 @app.route("/")
-@app.route("/<name>/")
 def other():
     try:
         return redirect(url_for("first_page"))
@@ -52,17 +52,22 @@ def third_page():
         print('\nerror in third_page func\n')
 
 
-urls = ["https://www.nbcnews.com/", "https://www.cnn.com/", "https://www.foxnews.com/"]
+urls = ["https://www.nbcnews.com/", "https://www.cnn.com/"]
 
 if __name__ == "__main__":
     #scrape info info from websites into
     setNumOfArticles(10)
-    for i in range(len(urls)): 
-        getNews(url[i])
-        links += getLinks()
-        titles += getTitles()
-        texts += getArticleText()
-    # print('Titles are: ' + str(titles))
-    # print('Links are: ' + str(links))
-    # print('Bodies are: ' + str(texts))
+    for i in range(0, len(urls)): 
+        getNews(urls[i])
+        linksAdd = getLinks()
+        links.extend(linksAdd)
+        print('Links is ' + str(links))
+        time.sleep(4)
+        titlesAdd = getTitles()
+        titles.extend(titlesAdd)
+        textsAdd = getArticleText()
+        texts.extend(textsAdd)
+    #print('Titles are: ' + str(titles))
+    #print('Links are: ' + str(links))
+    #print('Bodies are: ' + str(texts))
     app.run(debug=True)
