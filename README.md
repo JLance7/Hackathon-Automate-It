@@ -25,7 +25,7 @@
     <li>Sklearn</li>
 </ul>
 
-![img]('/flaskApp/static/img/flaskThumb.png')
+![img](flaskApp/static/img/flaskThumb.png)
 
 ## 2. Java GUI App
 ### Technologies Used:
@@ -35,7 +35,7 @@
     <li>MySQL Database</li>
 </ul>
 
-![img]('/flaskApp/static/img/javaThumb.png')
+![img](flaskApp/static/img/javaThumb.png)
 
 
 ---
