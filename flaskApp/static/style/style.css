@@ -83,6 +83,10 @@ a.menu:hover{
     border: 2px solid black;
 }
 
+.news2{
+    min-height: auto;
+}
+
 .footer{
     border-top: 2px solid #910a01;
     background-color: #ff4033;
