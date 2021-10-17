@@ -10,8 +10,8 @@ links = []
 article_text = []
 
 #globa variables
-title = None
-
+title = ""
+x = []
 
 def getNews(url):
     r1 = requests.get(url)
@@ -24,7 +24,7 @@ def getNews(url):
         link_content = soup1.find_all('h2', class_='tease-card__headline tease-card__title relative')
     elif url == "https://www.cnn.com/":
         print('\nGoing into 2\n')
-        title_content = soup1.find_all('h3', class_='cd__headline')
+        title_content = soup1.find_all('span', class_='cd__headline-text vid-left-enabled')
         link_content = soup1.find_all('h3', class_='cd__headline')
     else:
         print('\nGoing into 3\n')
@@ -38,29 +38,43 @@ def getNews(url):
     for i in range(0, num_of_articles):
         try:
             #get titles
-            if url == 'https://www.foxnews.com/':
-                title = title_content[i].get_text()
-            else:
-                title = title_content[i].get_text()
+            print()
+            print(title_content)
+            print()
+            title = title_content[i].get_text()
             titles.append(title)
-            print('GOT HERE')
-            print('wooo')
+            
+            print('TITLES')
             print(titles)
-            print('woo')
+            print()
             #get links
             link = link_content[i].find('a')['href']
             links.append(link)
+            print('LINKS')
+            print(links)
+            print()
             #get articles
             article = requests.get(link)
             article_con = article.content
             soup_article = BeautifulSoup(article_con, 'html5lib')
+            div2 = None
+            body = []
             if url == 'https://www.nbcnews.com/':
                 body = soup_article.find_all('div', class_='article-body__content')
             elif url == 'https://www.cnn.com':
-                body = soup_article.find_all('div', class_='l-container')
+                body = soup_article.find_all('span', class_='cd__headline-text vid-left-enabled')
             else:
-                body = soup_article.find_all('div', class_='article-content-wrap sticky-columns')
-            x = body[0].find_all('p')
+                #having trouble parsing fox website
+                div1 = soup_article.find_all('header', class_='info-header')
+            
+            if url == 'https://www.nbcnews.com':
+                x = body[0].find_all('p')
+            elif url == 'https://www.cnn.com':
+                x = body[0].find_all('p')
+            else:
+                for i in div2:
+                    div2 = div1.find_all('h3', class_='title title-color-default')
+                    x.append(i)
 
             # Unifying the paragraphs
             list_paragraphs = []
@@ -74,7 +88,8 @@ def getNews(url):
         except:
             traceback.print_exc()
             continue
-
+        
+        
 def getLinks():
     return links
 

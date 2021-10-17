@@ -69,7 +69,7 @@ def third_page():
         print('\nerror in third_page func\n')
 
 
-urls = ["https://www.foxnews.com/"]
+urls = ["https://www.cnn.com/"]
 
 if __name__ == "__main__":
     #scrape info info from websites into
