@@ -116,3 +116,16 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+li.menu a{
+    padding-top: 60px;
+    padding-bottom: 65px;
+    background-color: #fc0335 !important;
+    border: solid black 1px;
+}
+
+li a:hover{
+    background-color: #ff6157 !important;
+    padding-top: 60px !important;
+    padding-bottom: 65px !important;
+}

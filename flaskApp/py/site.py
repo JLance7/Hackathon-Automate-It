@@ -3,9 +3,26 @@ from flask import Flask, redirect, url_for, render_template
 from scrape import *
 import time
 #from newsGrabber import *
+
+#main lists
 links = []
 titles = []
 texts = []
+
+#nbc lists
+linksNBC = []
+titlesNBC = []
+textsNBC = []
+
+#cnn lists
+linksCNN = []
+titlesCNN = []
+textsCNN = []
+
+#fox lists
+linksFOX = []
+titlesFOX = []
+textsFOX = []
 
 app = Flask(__name__)
 app = Flask(__name__, static_folder='../static', template_folder='../html')
@@ -52,21 +69,17 @@ def third_page():
         print('\nerror in third_page func\n')
 
 
-urls = ["https://www.nbcnews.com/", "https://www.cnn.com/"]
+urls = ["https://www.foxnews.com/"]
 
 if __name__ == "__main__":
     #scrape info info from websites into
     setNumOfArticles(10)
     for i in range(0, len(urls)): 
         getNews(urls[i])
-        linksAdd = getLinks()
-        links.extend(linksAdd)
-        print('Links is ' + str(links))
-        time.sleep(4)
-        titlesAdd = getTitles()
-        titles.extend(titlesAdd)
-        textsAdd = getArticleText()
-        texts.extend(textsAdd)
+        links = getLinks()
+        #print('Links is ' + str(links))
+        titles = getTitles()
+        texts = getArticleText()
     #print('Titles are: ' + str(titles))
     #print('Links are: ' + str(links))
     #print('Bodies are: ' + str(texts))
