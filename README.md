@@ -26,8 +26,8 @@
 </ul>
 
 
-![img](flaskApp/static/img/flaskThumb.png){width: 50px;}
-=======
+
+
 ![img](flaskApp/static/img/flaskThumb.png)
 
 
@@ -39,8 +39,7 @@
     <li>MySQL Database</li>
 </ul>
 
-![img](flaskApp/static/img/javaThumb.png){width: 40px;}
-=======
+
 ![img](flaskApp/static/img/javaThumb.png)
 
 
