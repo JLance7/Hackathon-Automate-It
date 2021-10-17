@@ -2,7 +2,7 @@ import requests
 import traceback
 from bs4 import BeautifulSoup
 
-num_of_articles = 2
+num_of_articles = 5
 
 
 titles = []
@@ -67,14 +67,9 @@ def getNews(url):
                 #having trouble parsing fox website
                 div1 = soup_article.find_all('header', class_='info-header')
             
-            if url == 'https://www.nbcnews.com':
-                x = body[0].find_all('p')
-            elif url == 'https://www.cnn.com':
-                x = body[0].find_all('p')
-            else:
-                for i in div2:
-                    div2 = div1.find_all('h3', class_='title title-color-default')
-                    x.append(i)
+           
+            x = body[0].find_all('p')
+            
 
             # Unifying the paragraphs
             list_paragraphs = []
