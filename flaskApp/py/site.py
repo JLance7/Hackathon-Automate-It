@@ -35,7 +35,8 @@ def home():
 @app.route("/reliable-news/")
 def first_page():
     try:
-        return render_template("index.html", page="Reliable News", list1=validLink, list2=validTitle, list3=validTexts, num=len(links))
+        return render_template("index.html", page="Reliable News", list1=validLink, 
+            list2=validTitle, list3=validTexts, num=len(links), valid=len(validLink))
     except:
         print('\nerror in first_page func\n')
 
@@ -43,7 +44,8 @@ def first_page():
 @app.route("/unreliable-news/")
 def second_page():
     try:
-        return render_template("second.html", page="Unreliable News", list1=invalidLink, list2=invalidTitle, list3=invalidTexts, num=len(links))
+        return render_template("second.html", page="Unreliable News", list1=invalidLink, list2=invalidTitle, 
+            list3=invalidTexts, num=len(links), valid=(len(invalidLink)))
     except:
         print('\nerror in second_page func\n')
 
@@ -72,6 +74,7 @@ if __name__ == "__main__":
     #print('Bodies are: ' + str(texts))
     trainSetup()
     
+    #uncomment this block and comment bottom block for full functionality
     for i in range(len(titles)):
         try:
             articleResponse = checkFake(titles[i])
@@ -86,4 +89,10 @@ if __name__ == "__main__":
                 invalidTexts.append(texts[i])
         except:
             print('error in site main')
+
+    #for testing webscraping
+    # list1 = links
+    # list2 = titles
+    # list3 = texts
+
     app.run(debug=True)
