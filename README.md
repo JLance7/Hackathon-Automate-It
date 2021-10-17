@@ -9,7 +9,7 @@
 ## How we thought to solve them
 <ol>
     <li>A web application that automates filtering out unreliable news articles using machine learning</li>
-    <li>A personal graphical application that offers help and support based on your input</li>
+    <li>A personal graphical application that patient input and confirmation</li>
 </ol>
 
 ---
@@ -25,7 +25,7 @@
     <li>Sklearn</li>
 </ul>
 
-![img]('/flaskApp/static/img/flaskThumb.png')
+![img](flaskApp/static/img/flaskThumb.png){width: 50px;}
 
 ## 2. Java GUI App
 ### Technologies Used:
@@ -35,7 +35,7 @@
     <li>MySQL Database</li>
 </ul>
 
-![img]('/flaskApp/static/img/javaThumb.png')
+![img](flaskApp/static/img/javaThumb.png){width: 40px;}
 
 
 ---
