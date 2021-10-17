@@ -97,4 +97,3 @@ def getArticleText():
 def setNumOfArticles(num):
     num_of_articles = num
 
-
