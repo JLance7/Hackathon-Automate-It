@@ -2,12 +2,12 @@
 
 ## The problem
 <ol>
-    <li>Substance Abuse and Addiction</li>
+    <li>Automating a process for dealing with substance abuse and addiction</li>
 </ol>
 
 ## How we thought to solve them
 <ol>
-    <li>An automated personal graphical application for patients to input their information</li>
+    <li>An automated personal graphical application for patients to input their information based on their needs and concerns</li>
 </ol>
 
 ---
@@ -27,6 +27,10 @@
 ### A second problem, stopping the spread of misinformation (another side project)
 ## 2. Python News Website
 ### Technologies Used:
+## To solve the problem
+<ol>
+    <li>A flask website that scrapes articles and uses sklearn to determine if they are reliable or not</li>
+</ol>
 <ul>
     <li>Python</li>
     <li>Flask</li>
