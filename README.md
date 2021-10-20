@@ -5,7 +5,7 @@
     <li>Automating a process for dealing with substance abuse and addiction</li>
 </ol>
 
-## How we thought to solve them
+## How we thought to solve it
 <ol>
     <li>An automated personal graphical application for patients to input their information based on their needs and concerns</li>
 </ol>
