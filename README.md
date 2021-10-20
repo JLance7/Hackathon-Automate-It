@@ -26,11 +26,11 @@
 
 ### A second problem, stopping the spread of misinformation (another side project)
 ## 2. Python News Website
-### Technologies Used:
 ## To solve the problem
 <ol>
     <li>A flask website that scrapes articles and uses sklearn to determine if they are reliable or not</li>
 </ol>
+### Technologies Used:
 <ul>
     <li>Python</li>
     <li>Flask</li>
