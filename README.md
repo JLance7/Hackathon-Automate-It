@@ -1,4 +1,4 @@
-# UMSL Hackathon 2021 - Automate It
+# Automate It hackathon
 
 ## The problem
 <ol>
